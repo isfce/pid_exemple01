@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="pid" class="tp0Sol.model.Cours">
+		<constructor-arg value="PID" />
+	</bean>
+
+	<bean id="examen1" class="tp0Sol.model.Examen">
+		<constructor-arg ref="pid" />
+		<constructor-arg value="Examen de première session" />
+	</bean>
+
+	<bean id="examen2" class="tp0Sol.model.Examen">
+		<constructor-arg index="0" ref="pid" />
+		<constructor-arg index="1" value="Examen de seconde session" />
+	</bean>
+</beans>
