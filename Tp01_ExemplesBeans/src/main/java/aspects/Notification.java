@@ -7,6 +7,7 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
+import tp0Sol.model.Evaluation;
 import tp0Sol.model.IEvaluation;
 
 @Aspect
@@ -26,4 +27,16 @@ public class Notification {
 	public void test1(JoinPoint jp) {
 		System.out.println("UN APPEL de la méthode : "+jp.toShortString()+ "| Args => " + Arrays.asList(jp.getArgs()));
 	}
+	
+	@Before(value="args(int)&&bean(eval1)&& args(nombre)&&target(eval)",argNames="jp,nombre,eval")
+	public void test1(JoinPoint jp,int nombre, Evaluation eval) {
+		System.out.println("YES TEST1 Valeur in: "+nombre+" methode: "+jp.toShortString()+" Cible "+eval);
+	}
 }
+
+
+
+
+
+
+

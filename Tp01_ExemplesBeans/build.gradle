@@ -21,7 +21,7 @@ dependencies {
 //AOP
 	compile "org.springframework:spring-aop:${springVersion}"
 	compile "org.aspectj:aspectjweaver:${aspectJVersion}"
-
+//compile group: 'org.springframework', name: 'spring-aspects', version: '5.2.0.RELEASE'
 //Logger
     // The production code uses the SLF4J logging API at compile time
      compile "org.slf4j:slf4j-simple:${slf4jVersion}"

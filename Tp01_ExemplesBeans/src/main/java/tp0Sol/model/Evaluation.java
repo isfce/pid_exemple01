@@ -8,6 +8,8 @@ public class Evaluation implements IEvaluation {
 	private int ponderation;
 	private final IExamen examen;
 	private final Etudiant etudiant;
+	
+	//public int setBrol(int a) { return 1;};
 //	public Evaluation(IExamen examen, Etudiant etudiant) {
 //		super();
 //		this.examen = examen;
